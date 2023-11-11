@@ -10,28 +10,31 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
-    @Query var destinations: [Destination]
-    @State private var path: [Destination] = []
+    // @Query(sort: \Destination.name) var destinations: [Destination]
+    @State private var path = [Destination]()
+    @State private var sortOrder = SortDescriptor(\Destination.name)
+    @State private var searchText = ""
     var body: some View {
         NavigationStack(path: $path) {
-            List {
-                ForEach(destinations) { destination in
-                    NavigationLink(value: destination) {
-                        VStack(alignment: .leading) {
-                            Text(destination.name)
-                                .font(.headline)
-                            Text(destination.date.formatted(date: .long, time: .shortened))
-                        }
-                    }
-                }
-                .onDelete(perform: deleteDestination)
-            }
+            DestinationListingView(sort: sortOrder, searchString: searchText)
             .navigationTitle("ITour")
             .navigationDestination(for: Destination.self, destination: { destination in
                 EditDestination(destination: destination)
             })
+            .searchable(text: $searchText)
             .toolbar {
                 Button("Add Destination", systemImage: "plus", action: addDestination)
+                Menu("Sort", systemImage: "arrow.up.arrow.down") {
+                    Picker("Sort", selection: $sortOrder) {
+                        Text("Name")
+                            .tag(SortDescriptor(\Destination.name))
+                        Text("Date")
+                            .tag(SortDescriptor(\Destination.date))
+                        Text("Priority")
+                            .tag(SortDescriptor(\Destination.priority, order: .reverse))
+                    }
+                    .pickerStyle(.inline)
+                }
             }
         }
     }
@@ -42,12 +45,7 @@ struct ContentView: View {
         path = [destination]
     }
     
-    func deleteDestination(_ indexSet: IndexSet) {
-        for index in indexSet {
-            let destination = destinations[index]
-            modelContext.delete(destination)
-        }
-    }
+    
 }
 
 #Preview {

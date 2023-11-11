@@ -13,6 +13,8 @@
 		2876183A2AFFFDD900A8DCC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287618392AFFFDD900A8DCC6 /* Preview Assets.xcassets */; };
 		287618412AFFFE3500A8DCC6 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287618402AFFFE3500A8DCC6 /* Destination.swift */; };
 		287618432B00122300A8DCC6 /* EditDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287618422B00122300A8DCC6 /* EditDestination.swift */; };
+		287618452B001BFA00A8DCC6 /* DestinationListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287618442B001BFA00A8DCC6 /* DestinationListingView.swift */; };
+		287618472B00255D00A8DCC6 /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287618462B00255D00A8DCC6 /* Sight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		287618392AFFFDD900A8DCC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		287618402AFFFE3500A8DCC6 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		287618422B00122300A8DCC6 /* EditDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDestination.swift; sourceTree = "<group>"; };
+		287618442B001BFA00A8DCC6 /* DestinationListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListingView.swift; sourceTree = "<group>"; };
+		287618462B00255D00A8DCC6 /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				287618422B00122300A8DCC6 /* EditDestination.swift */,
 				287618322AFFFDD800A8DCC6 /* ITourApp.swift */,
 				287618342AFFFDD800A8DCC6 /* ContentView.swift */,
+				287618442B001BFA00A8DCC6 /* DestinationListingView.swift */,
+				287618462B00255D00A8DCC6 /* Sight.swift */,
 				287618362AFFFDD900A8DCC6 /* Assets.xcassets */,
 				287618382AFFFDD900A8DCC6 /* Preview Content */,
 				287618402AFFFE3500A8DCC6 /* Destination.swift */,
@@ -146,7 +152,9 @@
 				287618432B00122300A8DCC6 /* EditDestination.swift in Sources */,
 				287618352AFFFDD800A8DCC6 /* ContentView.swift in Sources */,
 				287618332AFFFDD800A8DCC6 /* ITourApp.swift in Sources */,
+				287618472B00255D00A8DCC6 /* Sight.swift in Sources */,
 				287618412AFFFE3500A8DCC6 /* Destination.swift in Sources */,
+				287618452B001BFA00A8DCC6 /* DestinationListingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
